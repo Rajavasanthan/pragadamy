@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function foo(dob, cb) {
+            var currentDate = "08/10/2019";
+            var age = currentDate - dob;
+            setTimeout(function () {
+                cb(age);
+            }, 3000)
+        }
+
+        foo("07/07/1988", function (data) {
+            console.log(data + "10000")
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>
