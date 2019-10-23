@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let result = new Promise(function(resolve,reject){
+        //     setTimeout(function(){
+        //         resolve({
+        //             mess : "Success"
+        //         });
+        //     },3000)
+        // })
+
+        // console.log("One")
+        // console.log("Two")
+
+        // result.then(function(data){
+        //     setTimeout(function(){
+        //         console.log(data)
+        //     },3000);
+        // })
+        // .then(function(){
+        //     console.log("Done");
+        // })
+        // .catch(function(err){
+        //     console.log(err);
+        // })
+
+        // console.log("Three");
+        // console.log("Four");
+
+            console.log("One")
+            console.log("Two")
+
+        async function myVal() {
+            let promise = new Promise((resolve, reject) => {
+                setTimeout(() => resolve("done!"), 3000)
+            });
+
+            let result = await promise; // wait till the promise resolves (*)
+            
+            console.log(result); // "done!"
+
+            let promise2 = new Promise((resolve, reject) => {
+                setTimeout(() => resolve("done2"), 3000)
+            });
+
+            let result2 = await promise2;
+
+            console.log(result2); // "done!"
+
+            console.log("Three");
+            console.log("Four");
+        }
+
+        myVal();
+          
+    </script>
+</body>
+
+</html>

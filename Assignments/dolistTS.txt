@@ -1,0 +1,11 @@
+Animalbehaviour = soundType(property),makeSound(method)
+
+abstract class Animal
+
+Cat implements Animalbehaviour extends Animal
+Dog
+Snake
+elephant
+
+class Zoo
+animalList:[]
